@@ -7,74 +7,78 @@
 
 <style>
 body{
-font-family: Arial, sans-serif;
-background:#f3f6f9;
-margin:0;
-padding:20px;
+  font-family: Arial, sans-serif;
+  background:#f3f6f9;
+  margin:0;
+  padding:20px;
 }
 
 .container{
-max-width:900px;
-margin:auto;
+  max-width:900px;
+  margin:auto;
 }
 
 .card{
-background:white;
-padding:25px;
-margin-bottom:20px;
-border-radius:15px;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
+  background:white;
+  padding:25px;
+  margin-bottom:20px;
+  border-radius:15px;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
 h1{
-text-align:center;
-color:#1565c0;
+  text-align:center;
+  color:#1565c0;
 }
 
 h2{
-color:#1565c0;
+  color:#1565c0;
 }
 
 label{
-font-weight:bold;
-display:block;
-margin-top:15px;
+  font-weight:bold;
+  display:block;
+  margin-top:15px;
 }
 
 input, select, textarea{
-width:100%;
-padding:10px;
-margin-top:5px;
-border:1px solid #ccc;
-border-radius:8px;
-box-sizing:border-box;
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  box-sizing:border-box;
 }
 
 .roles{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:15px;
-margin-top:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+  margin-top:20px;
 }
 
 .role{
-border:2px solid #1565c0;
-padding:15px;
-border-radius:12px;
-text-align:center;
-cursor:pointer;
+  border:2px solid #1565c0;
+  padding:15px;
+  border-radius:12px;
+  text-align:center;
+  cursor:pointer;
 }
 
 button{
-background:#1565c0;
-color:white;
-border:none;
-padding:15px;
-border-radius:10px;
-font-size:16px;
-width:100%;
-cursor:pointer;
-margin-top:20px;
+  background:#1565c0;
+  color:white;
+  border:none;
+  padding:15px;
+  border-radius:10px;
+  font-size:16px;
+  width:100%;
+  cursor:pointer;
+  margin-top:20px;
+}
+
+button:hover{
+  background:#0d47a1;
 }
 </style>
 </head>
@@ -93,32 +97,42 @@ margin-top:20px;
 <p>Selecciona cómo participas.</p>
 
 <div class="roles">
-<div class="role">📚 Docente</div>
-<div class="role">🏛️ Directivo</div>
-<div class="role">🎒 Estudiante</div>
-<div class="role">👨‍👩‍👧 Padre / Madre</div>
+  <label><input type="radio" name="rol" value="Docente"> Docente 📚</label>
+  <label><input type="radio" name="rol" value="Directivo"> Directivo 🏛️</label>
+  <label><input type="radio" name="rol" value="Estudiante"> Estudiante 🎒</label>
+  <label><input type="radio" name="rol" value="Padre/Madre"> Padre / Madre 👨‍👩‍👧</label>
 </div>
+
 </div>
 
 <div class="card">
 <h2>📋 2. Perfil Demográfico Personal</h2>
 
 <label>Nombre completo</label>
-<input type="text">
+<input type="text" name="nombre" required>
 
 <label>Número de contacto</label>
-<input type="text">
+<input type="text" name="telefono" required>
 
 <label>Edad</label>
-<input type="number">
+<input type="number" name="edad" required>
 
 <label>Género</label>
-<select>
-<option>Selecciona...</option>
-<option>Masculino</option>
-<option>Femenino</option>
-<option>Otro</option>
+<select name="genero" required>
+  <option value="">Selecciona...</option>
+  <option value="Masculino">Masculino</option>
+  <option value="Femenino">Femenino</option>
+  <option value="Otro">Otro</option>
 </select>
+
+</div>
+
+<div class="card">
+<h2>📝 Comentarios</h2>
+
+<label>Opinión general</label>
+<textarea name="opinion" rows="5" required></textarea>
+
 </div>
 
 </div>
