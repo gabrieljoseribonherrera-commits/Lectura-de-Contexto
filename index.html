@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lectura de Contexto Institucional</title>
+
+<style>
+body{
+font-family: Arial, sans-serif;
+background:#f5f5f5;
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+.seccion{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+h2{
+color:#0b5c89;
+}
+
+.roles{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.rol{
+border:2px solid #0b5c89;
+padding:15px;
+border-radius:10px;
+width:180px;
+text-align:center;
+cursor:pointer;
+}
+
+input, select, textarea{
+width:100%;
+padding:10px;
+margin-top:5px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:5px;
+box-sizing:border-box;
+}
+
+button{
+background:#0b5c89;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="seccion">
+
+<h2>1️⃣ Tu Rol en la Comunidad Educativa</h2>
+
+<p>Selecciona cómo participas.</p>
+
+<div class="roles">
+<div class="rol">📚 Docente</div>
+<div class="rol">🏛️ Directivo</div>
+<div class="rol">🎒 Estudiante</div>
+<div class="rol">👨‍👩‍👧 Padre / Madre</div>
+</div>
+
+</div>
+
+<div class="seccion">
+
+<h2>2️⃣ Perfil Demográfico Personal</h2>
+
+<label>Nombre completo</label>
+<input type="text">
+
+<label>Número de contacto</label>
+<input type="text">
+
+<label>Edad</label>
+<input type="number">
+
+<label>Género</label>
+<select>
+<option>Selecciona...</option>
+<option>Masculino</option>
+<option>Femenino</option>
+<option>Otro</option>
+</select>
+
+</div>
+
+<div class="seccion">
+
+<h2>3️⃣ Condiciones del Hogar y Calidad de Vida</h2>
+
+<label>Personas en el hogar</label>
+<input type="number">
+
+<label>Tipo de vivienda</label>
+<input type="text">
+
+</div>
+
+<button>Enviar Encuesta</button>
+
+</body>
+</html>
