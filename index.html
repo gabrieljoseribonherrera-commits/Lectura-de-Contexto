@@ -8,80 +8,98 @@
 <style>
 body{
 font-family: Arial, sans-serif;
-background:#f5f5f5;
-max-width:900px;
-margin:auto;
+background:#f3f6f9;
+margin:0;
 padding:20px;
 }
 
-.seccion{
+.container{
+max-width:900px;
+margin:auto;
+}
+
+.card{
 background:white;
-padding:20px;
+padding:25px;
 margin-bottom:20px;
-border-radius:10px;
-box-shadow:0 2px 5px rgba(0,0,0,.1);
+border-radius:15px;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+h1{
+text-align:center;
+color:#1565c0;
 }
 
 h2{
-color:#0b5c89;
+color:#1565c0;
 }
 
-.roles{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.rol{
-border:2px solid #0b5c89;
-padding:15px;
-border-radius:10px;
-width:180px;
-text-align:center;
-cursor:pointer;
+label{
+font-weight:bold;
+display:block;
+margin-top:15px;
 }
 
 input, select, textarea{
 width:100%;
 padding:10px;
 margin-top:5px;
-margin-bottom:15px;
 border:1px solid #ccc;
-border-radius:5px;
+border-radius:8px;
 box-sizing:border-box;
 }
 
-button{
-background:#0b5c89;
-color:white;
-padding:12px 20px;
-border:none;
-border-radius:5px;
+.roles{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+.role{
+border:2px solid #1565c0;
+padding:15px;
+border-radius:12px;
+text-align:center;
 cursor:pointer;
+}
+
+button{
+background:#1565c0;
+color:white;
+border:none;
+padding:15px;
+border-radius:10px;
+font-size:16px;
+width:100%;
+cursor:pointer;
+margin-top:20px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="seccion">
+<div class="container">
 
-<h2>1️⃣ Tu Rol en la Comunidad Educativa</h2>
+<h1>Lectura de Contexto Institucional</h1>
+
+<div class="card">
+<h2>📚 1. Tu Rol en la Comunidad Educativa</h2>
 
 <p>Selecciona cómo participas.</p>
 
 <div class="roles">
-<div class="rol">📚 Docente</div>
-<div class="rol">🏛️ Directivo</div>
-<div class="rol">🎒 Estudiante</div>
-<div class="rol">👨‍👩‍👧 Padre / Madre</div>
+<div class="role">📚 Docente</div>
+<div class="role">🏛️ Directivo</div>
+<div class="role">🎒 Estudiante</div>
+<div class="role">👨‍👩‍👧 Padre / Madre</div>
+</div>
 </div>
 
-</div>
-
-<div class="seccion">
-
-<h2>2️⃣ Perfil Demográfico Personal</h2>
+<div class="card">
+<h2>📋 2. Perfil Demográfico Personal</h2>
 
 <label>Nombre completo</label>
 <input type="text">
@@ -99,22 +117,9 @@ cursor:pointer;
 <option>Femenino</option>
 <option>Otro</option>
 </select>
-
 </div>
 
-<div class="seccion">
-
-<h2>3️⃣ Condiciones del Hogar y Calidad de Vida</h2>
-
-<label>Personas en el hogar</label>
-<input type="number">
-
-<label>Tipo de vivienda</label>
-<input type="text">
-
 </div>
-
-<button>Enviar Encuesta</button>
 
 </body>
 </html>
