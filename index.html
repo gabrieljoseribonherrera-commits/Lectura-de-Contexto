@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lectura de Contexto Institucional</title>
+<title>Encuesta Ponedera</title>
+
+<meta name="referrer" content="origin">
 
 <style>
 body{
@@ -20,126 +22,209 @@ body{
 
 .card{
   background:white;
-  padding:25px;
+  padding:20px;
   margin-bottom:20px;
-  border-radius:15px;
+  border-radius:12px;
   box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
-h1{
-  text-align:center;
-  color:#1565c0;
-}
-
-h2{
+h1,h2{
   color:#1565c0;
 }
 
 label{
   font-weight:bold;
   display:block;
-  margin-top:15px;
+  margin-top:10px;
 }
 
 input, select, textarea{
   width:100%;
   padding:10px;
   margin-top:5px;
-  border:1px solid #ccc;
   border-radius:8px;
+  border:1px solid #ccc;
   box-sizing:border-box;
 }
 
-.roles{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:15px;
-  margin-top:20px;
-}
-
-.role{
-  border:2px solid #1565c0;
-  padding:15px;
-  border-radius:12px;
-  text-align:center;
-  cursor:pointer;
-}
-
 button{
+  width:100%;
+  padding:15px;
   background:#1565c0;
   color:white;
   border:none;
-  padding:15px;
   border-radius:10px;
   font-size:16px;
-  width:100%;
   cursor:pointer;
-  margin-top:20px;
 }
 
 button:hover{
   background:#0d47a1;
+}
+
+.section-title{
+  font-weight:bold;
+  margin-top:15px;
 }
 </style>
 </head>
 
 <body>
 
-<form action="https://formspree.io/f/xeedbdpw" method="POST">
-
 <div class="container">
 
-<h1>Lectura de Contexto Institucional</h1>
+<h1>Lectura de Contexto Institucional - Ponedera</h1>
 
+<form action="https://formspree.io/f/xeedbdpw" method="POST">
+
+<!-- 1 -->
 <div class="card">
-<h2>📚 1. Tu Rol en la Comunidad Educativa</h2>
+<h2>1. Rol en la Comunidad</h2>
 
-<p>Selecciona cómo participas.</p>
-
-<div class="roles">
-  <label><input type="radio" name="rol" value="Docente"> Docente 📚</label>
-  <label><input type="radio" name="rol" value="Directivo"> Directivo 🏛️</label>
-  <label><input type="radio" name="rol" value="Estudiante"> Estudiante 🎒</label>
-  <label><input type="radio" name="rol" value="Padre/Madre"> Padre / Madre 👨‍👩‍👧</label>
+<label>Rol *</label>
+<select name="rol" required>
+<option value="">Selecciona...</option>
+<option>Docente</option>
+<option>Directivo</option>
+<option>Estudiante</option>
+<option>Padre/Madre</option>
+</select>
 </div>
 
-</div>
-
+<!-- 2 -->
 <div class="card">
-<h2>📋 2. Perfil Demográfico Personal</h2>
+<h2>2. Perfil Demográfico</h2>
 
-<label>Nombre completo</label>
-<input type="text" name="nombre" required>
+<label>Nombre</label>
+<input type="text" name="nombre">
 
-<label>Número de contacto</label>
-<input type="text" name="telefono" required>
+<label>Teléfono</label>
+<input type="text" name="telefono">
 
-<label>Edad</label>
+<label>Edad *</label>
 <input type="number" name="edad" required>
 
-<label>Género</label>
+<label>Género *</label>
 <select name="genero" required>
-  <option value="">Selecciona...</option>
-  <option value="Masculino">Masculino</option>
-  <option value="Femenino">Femenino</option>
-  <option value="Otro">Otro</option>
+<option value="">Selecciona...</option>
+<option>Masculino</option>
+<option>Femenino</option>
+<option>Otro</option>
 </select>
 
+<label>Estrato</label>
+<input type="text" name="estrato">
+
+<label>Barrio o vereda</label>
+<input type="text" name="barrio">
+
+<label>Zona</label>
+<input type="text" name="zona">
+
+<label>Pertenencia étnica</label>
+<input type="text" name="etnia">
+
+<label>Tiempo en la institución</label>
+<input type="text" name="tiempo_institucion">
+
+<label>Municipio de origen</label>
+<input type="text" name="origen">
 </div>
 
+<!-- 3 -->
 <div class="card">
-<h2>📝 Comentarios</h2>
+<h2>3. Condiciones del Hogar</h2>
 
-<label>Opinión general</label>
-<textarea name="opinion" rows="5" required></textarea>
+<label>Personas en el hogar</label>
+<input type="text" name="personas_hogar">
 
+<label>Tipo de núcleo familiar</label>
+<input type="text" name="familia">
+
+<label>Vivienda</label>
+<input type="text" name="vivienda">
+
+<label>Servicios del hogar</label>
+<textarea name="servicios"></textarea>
+
+<label>Tecnología en casa</label>
+<input type="text" name="tecnologia">
+
+<label>Programas sociales</label>
+<input type="text" name="programas">
+
+<label>Régimen de salud</label>
+<input type="text" name="salud">
 </div>
 
+<!-- 4 -->
+<div class="card">
+<h2>4. Territorio de Ponedera</h2>
+
+<label>Realidades que afectan la escuela</label>
+<textarea name="realidades"></textarea>
+
+<label>Situación que más pesa</label>
+<textarea name="situacion_peso"></textarea>
+
+<label>Tradiciones culturales</label>
+<input type="text" name="tradiciones">
+
+<label>Mayor riqueza del territorio</label>
+<textarea name="riqueza"></textarea>
+</div>
+
+<!-- 5 -->
+<div class="card">
+<h2>5. Saberes locales</h2>
+
+<label>Relación escuela-territorio (1-5)</label>
+<input type="number" name="relacion_escuela" min="1" max="5">
+
+<label>Saberes que deberían estar más presentes</label>
+<textarea name="saberes"></textarea>
+
+<label>Conocimiento familiar</label>
+textarea name="conocimiento_familiar"></textarea>
+
+<label>Actores que deberían vincularse</label>
+<textarea name="actores"></textarea>
+</div>
+
+<!-- 6 -->
+<div class="card">
+<h2>6. Percepción institucional</h2>
+
+<label>Conocimiento de la realidad (1-5)</label>
+<input type="number" name="conocimiento_realidad" min="1" max="5">
+
+<label>Satisfacción (1-5)</label>
+<input type="number" name="satisfaccion" min="1" max="5">
+
+<label>Seguridad participando (1-5)</label>
+<input type="number" name="seguridad" min="1" max="5">
+
+<label>Barrera de participación</label>
+input type="text" name="barrera">
+
+<label>Medio de comunicación</label>
+<input type="text" name="medio">
+
+<label>Experiencias positivas</label>
+<textarea name="experiencias"></textarea>
+
+<label>Propuesta</label>
+<textarea name="propuesta"></textarea>
+
+<label>Comentario final</label>
+<textarea name="comentario_final"></textarea>
 </div>
 
 <button type="submit">Enviar Encuesta</button>
 
 </form>
+
+</div>
 
 </body>
 </html>
