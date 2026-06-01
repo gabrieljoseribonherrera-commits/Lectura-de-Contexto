@@ -62,9 +62,8 @@ button:hover{
   background:#0d47a1;
 }
 
-.section-title{
-  font-weight:bold;
-  margin-top:15px;
+.section{
+  margin-top:10px;
 }
 </style>
 </head>
@@ -79,7 +78,7 @@ button:hover{
 
 <!-- 1 -->
 <div class="card">
-<h2>1. Rol en la Comunidad</h2>
+<h2>1. Rol en la Comunidad Educativa</h2>
 
 <label>Rol *</label>
 <select name="rol" required>
@@ -87,7 +86,7 @@ button:hover{
 <option>Docente</option>
 <option>Directivo</option>
 <option>Estudiante</option>
-<option>Padre/Madre</option>
+<option>Padre / Madre</option>
 </select>
 </div>
 
@@ -95,10 +94,10 @@ button:hover{
 <div class="card">
 <h2>2. Perfil Demográfico</h2>
 
-<label>Nombre</label>
+<label>Nombre completo</label>
 <input type="text" name="nombre">
 
-<label>Teléfono</label>
+<label>Número de contacto</label>
 <input type="text" name="telefono">
 
 <label>Edad *</label>
@@ -112,7 +111,7 @@ button:hover{
 <option>Otro</option>
 </select>
 
-<label>Estrato</label>
+<label>Estrato socioeconómico</label>
 <input type="text" name="estrato">
 
 <label>Barrio o vereda</label>
@@ -124,10 +123,10 @@ button:hover{
 <label>Pertenencia étnica</label>
 <input type="text" name="etnia">
 
-<label>Tiempo en la institución</label>
-<input type="text" name="tiempo_institucion">
+<label>Tiempo en institución</label>
+<input type="text" name="tiempo">
 
-<label>Municipio de origen</label>
+<label>Origen</label>
 <input type="text" name="origen">
 </div>
 
@@ -138,10 +137,10 @@ button:hover{
 <label>Personas en el hogar</label>
 <input type="text" name="personas_hogar">
 
-<label>Tipo de núcleo familiar</label>
+<label>Núcleo familiar</label>
 <input type="text" name="familia">
 
-<label>Vivienda</label>
+<label>Tipo de vivienda</label>
 <input type="text" name="vivienda">
 
 <label>Servicios del hogar</label>
@@ -161,16 +160,16 @@ button:hover{
 <div class="card">
 <h2>4. Territorio de Ponedera</h2>
 
-<label>Realidades que afectan la escuela</label>
+<label>Realidades del territorio</label>
 <textarea name="realidades"></textarea>
 
 <label>Situación que más pesa</label>
-<textarea name="situacion_peso"></textarea>
+<textarea name="situacion"></textarea>
 
 <label>Tradiciones culturales</label>
-<input type="text" name="tradiciones">
+<textarea name="tradiciones"></textarea>
 
-<label>Mayor riqueza del territorio</label>
+<label>Riqueza del territorio</label>
 <textarea name="riqueza"></textarea>
 </div>
 
@@ -179,15 +178,15 @@ button:hover{
 <h2>5. Saberes locales</h2>
 
 <label>Relación escuela-territorio (1-5)</label>
-<input type="number" name="relacion_escuela" min="1" max="5">
+<input type="number" name="relacion" min="1" max="5">
 
-<label>Saberes que deberían estar más presentes</label>
+<label>Saberes que deben estar en la educación</label>
 <textarea name="saberes"></textarea>
 
 <label>Conocimiento familiar</label>
-textarea name="conocimiento_familiar"></textarea>
+<textarea name="conocimiento_familiar"></textarea>
 
-<label>Actores que deberían vincularse</label>
+<label>Actores del municipio</label>
 <textarea name="actores"></textarea>
 </div>
 
@@ -196,28 +195,28 @@ textarea name="conocimiento_familiar"></textarea>
 <h2>6. Percepción institucional</h2>
 
 <label>Conocimiento de la realidad (1-5)</label>
-<input type="number" name="conocimiento_realidad" min="1" max="5">
+<input type="number" name="conocimiento" min="1" max="5">
 
 <label>Satisfacción (1-5)</label>
 <input type="number" name="satisfaccion" min="1" max="5">
 
-<label>Seguridad participando (1-5)</label>
+<label>Seguridad participación (1-5)</label>
 <input type="number" name="seguridad" min="1" max="5">
 
 <label>Barrera de participación</label>
-input type="text" name="barrera">
+<input type="text" name="barrera">
 
 <label>Medio de comunicación</label>
 <input type="text" name="medio">
 
-<label>Experiencias positivas</label>
+<label>Experiencias</label>
 <textarea name="experiencias"></textarea>
 
 <label>Propuesta</label>
 <textarea name="propuesta"></textarea>
 
 <label>Comentario final</label>
-<textarea name="comentario_final"></textarea>
+<textarea name="comentario"></textarea>
 </div>
 
 <button type="submit">Enviar Encuesta</button>
